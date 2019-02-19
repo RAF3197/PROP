@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="parentDiv" prefHeight="261.0" prefWidth="278.0" styleClass="game_creation_background" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.user.UserController">
+   <children>
+      <AnchorPane fx:id="parentAnchor" prefHeight="260.0" prefWidth="278.0">
+         <children>
+            <Button layoutX="43.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleOnLogin" prefHeight="27.0" prefWidth="194.0" styleClass="button_light" text="Iniciar Sessió" />
+            <TextField fx:id="usernameText" layoutX="42.0" layoutY="61.0" onKeyPressed="#handleOnKeyPresed" prefHeight="27.0" prefWidth="194.0" />
+            <TextField fx:id="passwordText" layoutX="42.0" layoutY="125.0" onKeyPressed="#handleOnKeyPresed" prefHeight="27.0" prefWidth="194.0" />
+            <Label layoutX="41.0" layoutY="35.0" styleClass="game_creation_main_text" text="Username" />
+            <Label layoutX="43.0" layoutY="99.0" styleClass="game_creation_main_text" text="Password" />
+            <Button layoutX="42.0" layoutY="204.0" mnemonicParsing="false" onAction="#handleOnRegister" prefHeight="27.0" prefWidth="194.0" styleClass="button_light" text="Registrar" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="700.0" prefWidth="800.0" styleClass="main_background" stylesheets="@../screens/styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+            <Menu mnemonicParsing="false" text="User">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleLogOutMenu" text="Log out" />
+              </items>
+            </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="menuAboutMyHelloApp" mnemonicParsing="false" onAction="#handleMenuAction" text="About HIDATOS" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="parentPanel" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button layoutX="308.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleNewGameButton" prefHeight="64.0" prefWidth="185.0" text="NOVA PARTIDA" />
+            <Button layoutX="307.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleContinueGameButton" prefHeight="27.0" prefWidth="185.0" text="CONTINUAR PARTIDA" />
+            
+            <Button layoutX="590.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleRankingButton" prefHeight="43.0" prefWidth="185.0" text="RANKING" />
+            <Button layoutX="308.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="27.0" prefWidth="185.0" text="CREAR HIDATO" />
+            <Button layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleLoadButton" prefHeight="43.0" prefWidth="185.0" text="COMUNITAT" />
+            <Label layoutX="230.0" layoutY="78.0" styleClass="main_title" text="HIDATOS" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

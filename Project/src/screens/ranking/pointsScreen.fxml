@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.ranking.pointsScreen">
+   <children>
+      <TableView fx:id="ranking" prefHeight="402.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="usernames" prefWidth="300.0" text="Nom d'usuari" />
+            <TableColumn fx:id="score" prefWidth="300.0" text="Puntuació" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="324.0" prefWidth="527.0" styleClass="new_game_background" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.game.newGame.NewGameController">
+   <children>
+      <Button fx:id="continueButton" layoutX="422.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleContinueButtonClick" text="Continuar" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4d5b61" height="194.0" layoutX="24.0" layoutY="50.0" smooth="false" stroke="#2b403d00" strokeType="INSIDE" styleClass="new_game_section_background" width="230.0" />
+      <Label layoutX="26.0" layoutY="14.0" styleClass="new_game_section_text" text="Configuració del taulell">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="60.0" styleClass="game_background_panel_text" text="Forma de les cel·les" />
+      <RadioButton fx:id="taulellFormaTriangular" layoutX="32.0" layoutY="86.0" mnemonicParsing="false" onAction="#handleFormaTaulellTriangular" styleClass="game_background_panel_text" text="Triangular">
+         <toggleGroup>
+            <ToggleGroup fx:id="taulellFormaCelles" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="taulellFormaQuadrada" layoutX="32.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleFormaTaulellQuadrada" styleClass="game_background_panel_text" text="Quadrada" toggleGroup="$taulellFormaCelles" />
+      <RadioButton fx:id="taulellFormaRectangular" layoutX="32.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleFormaTaulellRectangular" styleClass="game_background_panel_text" text="Rectangular" toggleGroup="$taulellFormaCelles" />
+      <Label layoutX="32.0" layoutY="157.0" styleClass="game_background_panel_text" text="Adjacència de les cel·les" />
+      <RadioButton fx:id="taulellAdjacenciaCostats" layoutX="32.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleAdjacenciaTaulellCostats" styleClass="game_background_panel_text" text="Costats">
+         <toggleGroup>
+            <ToggleGroup fx:id="taulellAdjacenciaCelles" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="taulellAdjacenciaBoth" layoutX="32.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleAdjacenciaTaulellBoth" styleClass="game_background_panel_text" text="Costats + vertexs" toggleGroup="$taulellAdjacenciaCelles" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4d5b61" height="194.0" layoutX="271.0" layoutY="50.0" smooth="false" stroke="#d1d1d100" strokeType="INSIDE" styleClass="new_game_section_background" width="230.0" />
+      <Label layoutX="272.0" layoutY="14.0" styleClass="new_game_section_text" text="Configuració de l'hidato">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="hidatoFormaTriangular" layoutX="280.0" layoutY="86.0" mnemonicParsing="false" onAction="#handleFormaHidatoTriangular" styleClass="game_background_panel_text" text="Triangular">
+         <toggleGroup>
+            <ToggleGroup fx:id="hidatoFormaCelles" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="hidatoFormaQuadrada" layoutX="280.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleFormaHidatoQuadrada" styleClass="game_background_panel_text" text="Quadrada" toggleGroup="$hidatoFormaCelles" />
+      <RadioButton fx:id="hidatoFormaHexagonal" layoutX="280.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleFormaHidatoHexagonal" styleClass="game_background_panel_text" text="Hexagonal" toggleGroup="$hidatoFormaCelles" />
+      <Label layoutX="283.0" layoutY="60.0" styleClass="game_background_panel_text" text="Forma de les cel·les" />
+      <Label layoutX="280.0" layoutY="159.0" styleClass="game_background_panel_text" text="Dificultat de l'hidato" />
+      <ProgressBar fx:id="complexityBar" layoutX="25.0" layoutY="285.0" prefHeight="20.0" prefWidth="380.0" progress="0.1" style="-fx-accent: rgba(0,255,0);" />
+      <Label layoutX="25.0" layoutY="255.0" styleClass="new_game_section_text" text="Dificultat de l'hidato" />
+      <ComboBox fx:id="dificultCmb" layoutX="280.0" layoutY="182.0" onAction="#handleDificultAction" prefWidth="150.0" promptText="Dificultat" />
+   </children>
+</AnchorPane>

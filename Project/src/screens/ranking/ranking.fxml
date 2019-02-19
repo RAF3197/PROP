@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane centerShape="false" prefHeight="400.0" prefWidth="600.0" styleClass="game_creation_background" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.ranking.RankingController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="squareTab" onSelectionChanged="#tabSelected" text="Quadrat">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="game_creation_background">
+                     <children>
+                        <TableView fx:id="listSquare" onMouseClicked="#handleMouseClickSquare" prefHeight="367.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="listSquareNum" prefWidth="120.0" text="Nombre" />
+                            <TableColumn fx:id="listSquareTopo" prefWidth="120.0" text="Topologia" />
+                              <TableColumn fx:id="listSquareRow" prefWidth="120.0" text="Files" />
+                              <TableColumn fx:id="listSquareCol" prefWidth="120.0" text="Columnes" />
+                              <TableColumn fx:id="listSquareDif" prefWidth="120.0" text="Dificultat" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="triangularTab" onSelectionChanged="#tabSelected" text="Triangular">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="listTriang" onMouseClicked="#handleMouseClickTriang" prefHeight="367.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="listTriangNum" prefWidth="120.0" style="-fx-text-alignment: center" text="Nombre" />
+                              <TableColumn fx:id="listTriangTopo" prefWidth="120.0" style="-fx-text-alignment: center" text="Topologia" />
+                              <TableColumn fx:id="listTriangRow" prefWidth="120.0" style="-fx-text-alignment: center" text="Files" />
+                              <TableColumn fx:id="listTriangCol" prefWidth="120.0" style="-fx-text-alignment: center" text="Columnes" />
+                              <TableColumn fx:id="listTriangDif" prefWidth="120.0" style="-fx-text-alignment: center" text="Dificultat" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="hexagonalTab" onSelectionChanged="#tabSelected" text="Hexagonal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="586.0">
+                     <children>
+                        <TableView fx:id="listHex" onMouseClicked="#handleMouseClickHex" prefHeight="367.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="listHexNum" prefWidth="120.0" text="Nombre" />
+                              <TableColumn fx:id="listHexTopo" prefWidth="120.0" text="Topologia" />
+                              <TableColumn fx:id="listHexRow" prefWidth="120.0" text="Files" />
+                              <TableColumn fx:id="listHexCol" prefWidth="120.0" text="Columnes" />
+                              <TableColumn fx:id="listHexDif" prefWidth="120.0" text="Dificultat" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
