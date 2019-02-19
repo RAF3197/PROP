@@ -1,1 +1,3 @@
-PROP
+Hidato PROP Project
+
+FIB-UPC
